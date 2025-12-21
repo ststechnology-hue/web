@@ -33,3 +33,12 @@
     height: 40px !important; /* same as h-10 */
   }
 </style>
+<script>
+  (function () {
+    const redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect !== "/") {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
