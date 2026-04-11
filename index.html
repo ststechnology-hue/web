@@ -3,8 +3,8 @@
 <script>
   var path = window.location.pathname;
 
-  // ✅ If /contact → go to real contact project
-  if (path === "/contact") {
+  // ✅ Handle ALL contact variations
+  if (path.startsWith("/contact")) {
     window.location.replace("/contact/");
   }
 </script>
