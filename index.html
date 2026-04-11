@@ -38,6 +38,12 @@
     <link rel="stylesheet" crossorigin href="/assets/index-B5CXuvC6.css">
   </head>
   <body>
+    <script>
+  // Check both /contact and /contact/
+  if (window.location.pathname.replace(/\/$/, "") === '/contact') {
+    window.location.replace('/contact.html');
+  }
+</script>
     <div id="root"></div>
   </body>
 </html>
