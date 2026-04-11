@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<script>
+  var path = window.location.pathname;
+
+  // ✅ If /contact → go to real contact project
+  if (path === "/contact") {
+    window.location.replace("/contact/");
+  }
+</script>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
