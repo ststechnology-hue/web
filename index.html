@@ -48,10 +48,31 @@
 </style>
 <script>
   (function () {
+    var path = window.location.pathname;
+
+    // ✅ Redirect /contact to another project page
+    if (path === "/contact") {
+      window.location.replace("/contact.html");
+      return;
+    }
+
+    // ✅ SPA redirect handler (for other routes only)
+    const redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect !== "/" && redirect !== "/contact") {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
+<!-- <script>
+    if (window.location.pathname === "/contact") {
+    window.location.href = "/contact.html";
+  }
+  (function () {
     const redirect = sessionStorage.redirect;
     delete sessionStorage.redirect;
     if (redirect && redirect !== "/") {
       history.replaceState(null, null, redirect);
     }
   })();
-</script>
+</script> -->
