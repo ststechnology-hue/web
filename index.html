@@ -58,8 +58,15 @@
 </style>
 <script>
   (function () {
+    var path = window.location.pathname;
+
+    // ❌ Skip SPA for contact routes
+    if (path.startsWith("/contact")) return;
+
+    // ✅ Normal SPA fallback
     const redirect = sessionStorage.redirect;
     delete sessionStorage.redirect;
+
     if (redirect && redirect !== "/") {
       history.replaceState(null, null, redirect);
     }
