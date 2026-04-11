@@ -32,6 +32,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+  if (window.location.pathname === "/contact") {
+    window.location.replace("/contact.html");
+  }
+</script>
     <script type="module" crossorigin src="/assets/index-sQzeqR9n.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B5CXuvC6.css">
   </head>
@@ -48,18 +53,9 @@
 </style>
 <script>
   (function () {
-    var path = window.location.pathname;
-
-    // ✅ Redirect /contact to another project page
-    if (path === "/contact") {
-      window.location.replace("/contact.html");
-      return;
-    }
-
-    // ✅ SPA redirect handler (for other routes only)
     const redirect = sessionStorage.redirect;
     delete sessionStorage.redirect;
-    if (redirect && redirect !== "/" && redirect !== "/contact") {
+    if (redirect && redirect !== "/") {
       history.replaceState(null, null, redirect);
     }
   })();
