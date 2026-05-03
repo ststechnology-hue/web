@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <script>
-      sessionStorage.redirect = location.pathname;
-      location.replace("/");
-    </script>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>STS Technology</title>
+  <script>
+    // Captures the URL and redirects to / so the SPA can handle routing
+    sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+    window.location.replace('/');
+  </script>
+</head>
+<body>
+  <p>Loading STS Technology...</p>
+</body>
 </html>
