@@ -50,9 +50,9 @@
 </style>
 <script>
   (function () {
-    const redirect = sessionStorage.redirect;
-    delete sessionStorage.redirect;
-    if (redirect && redirect !== "/") {
+    var redirect = sessionStorage.getItem('redirect');
+    sessionStorage.removeItem('redirect');
+    if (redirect && redirect !== location.pathname) {
       history.replaceState(null, null, redirect);
     }
   })();
