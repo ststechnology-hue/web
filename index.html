@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Website & Mobile App Development Company in Kerala | STS Technology</title>
+  <meta name="description" content="STS Technology is a professional website and mobile app development company in Kerala. We build SEO-friendly websites, Android & iOS apps, and custom software solutions for businesses near you." />
 
- <title>
-    Website & Mobile App Development Company in Kerala | STS Technology
-  </title>
-        <meta
-    name="description"
-    content="STS Technology is a professional website and mobile app development company in Kerala. We build SEO-friendly websites, Android & iOS apps, and custom software solutions for businesses near you."
-  />
-
-      <!-- CANONICAL -->
+  <!-- CANONICAL -->
   <link rel="canonical" href="https://ststechnology.linkpc.net/" />
 
   <!-- OPEN GRAPH -->
@@ -22,57 +16,35 @@
   <meta property="og:url" content="https://ststechnology.linkpc.net/" />
   <meta property="og:image" content="https://ststechnology.linkpc.net/opengraph.jpg" />
 
-     <!-- TWITTER -->
+  <!-- TWITTER -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Website & Mobile App Development Company in Kerala | STS Technology" />
   <meta name="twitter:description" content="Looking for a website or mobile app developer near you? STS Technology delivers professional IT solutions in Kerala." />
   <meta name="twitter:image" content="https://ststechnology.linkpc.net/opengraph.jpg" />
 
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-sQzeqR9n.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B5CXuvC6.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- SPA redirect fix: MUST be before the JS bundle loads -->
+  <script>
+    (function () {
+      var redirect = sessionStorage.getItem('redirect');
+      sessionStorage.removeItem('redirect');
+      if (redirect && redirect !== location.pathname) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+
+  <script type="module" crossorigin src="/assets/index-sQzeqR9n.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B5CXuvC6.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <style>
+    .logo-auto { width: auto !important; height: 40px !important; }
+  </style>
+</body>
 </html>
-
-<style>
-  .logo-auto {
-    width: auto !important;
-    height: 40px !important; /* same as h-10 */
-  }
-</style>
-<script>
-  (function () {
-    var path = window.location.pathname;
-
-    // ✅ Redirect /contact to another project page
-    if (path === "/contact") {
-      window.location.replace("/contact.html");
-      return;
-    }
-
-    // ✅ SPA redirect handler (for other routes only)
-    const redirect = sessionStorage.redirect;
-    delete sessionStorage.redirect;
-    if (redirect && redirect !== "/" && redirect !== "/contact") {
-      history.replaceState(null, null, redirect);
-    }
-  })();
-</script>
-<!-- <script>
-    if (window.location.pathname === "/contact") {
-    window.location.href = "/contact.html";
-  }
-  (function () {
-    const redirect = sessionStorage.redirect;
-    delete sessionStorage.redirect;
-    if (redirect && redirect !== "/") {
-      history.replaceState(null, null, redirect);
-    }
-  })();
-</script> -->
